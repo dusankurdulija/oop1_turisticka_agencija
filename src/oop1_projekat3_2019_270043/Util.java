@@ -80,5 +80,9 @@ public class Util {
 		}
 
 	}
+	
+	public void kreiranjeAranzmana() {
+		
+	}
 
 }
