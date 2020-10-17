@@ -44,7 +44,7 @@ public class Util {
 		
 	}
 	
-	public static void klijentMeni() {
+	public static void klijentMeni() throws FileNotFoundException {
 //		try {
 ////			FileInputStream fis = new FileInputStream("ulogovani.txt");
 ////			Scanner sc = new Scanner(fis);
@@ -91,7 +91,6 @@ public class Util {
 	}
 	
 	public static Korisnik login(ArrayList<Klijent> klijenti, ArrayList<Agent> agenti) throws FileNotFoundException {
-		csvReader("klijenti.csv");
 		Scanner sc = new Scanner(System.in);
 		System.out.println("---Login---");
 		System.out.print("username: ");
@@ -124,6 +123,13 @@ public class Util {
 		printer.println(ulogovani.zaUpisUFajl());
 		printer.flush();
 		printer.close();
+	}
+	
+	public static void dohvatiUlogovanog() throws FileNotFoundException {
+		Scanner sc = new Scanner(new File("ulogovani.txt"));
+		sc.useDelimiter("|");
+		System.out.println(sc.nextLine());
+		sc.close();
 	}
 	
 	public static void csvReader(String filename) {
