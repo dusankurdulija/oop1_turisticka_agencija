@@ -1,5 +1,9 @@
 package oop1_projekat3_2019_270043;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class Klijent extends Korisnik {
 	private double novcanoStanje;
 
@@ -24,6 +28,13 @@ public class Klijent extends Korisnik {
 	@Override
 	public String toString() {
 		return "Klijent [novcanoStanje=" + novcanoStanje + "]";
+	}
+	
+	public static void uplataNovca() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Unesite vrednost novca za uplatu: ");
+		double iznos = sc.nextDouble();
+		System.out.println(iznos);
 	}
 
 }

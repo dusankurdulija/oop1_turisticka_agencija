@@ -56,6 +56,10 @@ public abstract class Korisnik {
 		return "Korisnik [ime=" + ime + ", prezime=" + prezime + "]";
 	}
 	
+	public String zaUpisUFajl() {
+		return ime + "|" + prezime + "|" + getUsername() + "|" + getPassword();
+	}
+	
 	
 	
 }
